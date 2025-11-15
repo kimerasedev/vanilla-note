@@ -1,0 +1,64 @@
+:root {
+  /* ===== 다크 모드 (default) ===== */
+  --bg: #0b0c0f;
+  --panel: #121318;
+  --panel-2: #181a20;
+  --panel-3: #1f232b;
+  --text: #e6e8ef;
+  --muted: #9aa1ae;
+  --primary: #6ea8fe;
+  --accent: #5eead4;
+  --border: #2a2f39;
+  --danger: #ff6b6b;
+  --success: #7ad69f;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --radius: 12px;
+  --sidebar-w: 260px;
+  --navbar-h: 56px;
+
+  /* 마크다운 에디터 테두리 (톤 다운) */
+  --md-border: #2d3340;
+  --md-border-focus: #3b4354;
+  --md-shadow-focus: 0 0 0 3px rgba(110, 168, 254, 0.15);
+
+  /* z-index 값 */
+  --z-sidebar: 1000;
+  --z-dropdown: 10150;
+  --z-popover: 10160;
+  --z-overlay: 10170;
+  --z-modal: 10180;
+  --z-toast: 10190;
+  --z-peek: 10200;
+}
+
+/* ===== 라이트 모드 (체크박스로 강제 전환) ===== */
+:root[data-theme="light"] {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --panel-2: #f7f7fb;
+  --panel-3: #f0f2f7;
+  --text: #1c1f29;
+  --muted: #4b5563;
+  --primary: #2563eb;
+  --accent: #06b6d4;
+  --border: #e5e7eb;
+
+  --md-border: #d1d5db;
+  --md-border-focus: #bfc6d1;
+  --md-shadow-focus: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pretendard", system-ui, sans-serif;
+}
