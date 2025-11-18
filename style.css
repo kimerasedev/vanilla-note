@@ -48,17 +48,71 @@
   --md-shadow-focus: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-/* Reset CSS */
+/* ===== Reset CSS ===== */
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 body {
+  background: var(--bg);
+  color: var(--text);
   font-family: "Pretendard", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button {
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* ===== 전체 레이아웃 ===== */
+.app {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  grid-template-rows: var(--navbar-h);
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--panel-2);
+}
+
+/* ===== 사이드바 ====== */
+.sidebar {
+  grid-column: 1;
+  grid-row: 1 / span2; /* 사이드바 row 2칸 모두 차지함 */
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent),
+    var(--panel);
+  border-right: 1px solid var(--border);
+  overflow: visible;
+  z-index: var(--z-sidebar);
+  transition: transform 0.25s ease;
+}
+
+.collapse-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+.collapse-btn:hover {
+  background-color: var(--panel-3);
+  color: var(--text);
 }
