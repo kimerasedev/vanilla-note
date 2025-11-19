@@ -33,7 +33,7 @@
 
           <!-- 프로필 -->
           <div class="user-box">
-            <div class="avatar">/</div>
+            <div class="avatar"></div>
             <div class="user-meta">
               <strong>GUEST</strong>
               <small>guest@example.com</small>
@@ -80,9 +80,9 @@
       </aside>
 
       <!-- 사이드바 여는 버튼 (모바일) -->
-      <button id="sidebarPeekBtn" class="peek-btn" title="사이드바 열기">
+      <!-- <button id="sidebarPeekBtn" class="peek-btn" title="사이드바 열기">
         ☰
-      </button>
+      </button> -->
 
       <!-- Navbar -->
       <header class="navbar">
@@ -116,13 +116,61 @@
           </button>
 
           <!-- 검색 및 설정 -->
+          <!-- ❓ id 이름 동일함??? -->
           <button id="actionSearch" class="btn small" title="검색">🔍</button>
           <button id="actionSettings" class="btn small" title="설정">⚙️</button>
         </div>
       </header>
 
       <!-- Main -->
-      <main></main>
+      <main>
+        <div class="doc-canvas">
+          <!-- 메인 콘텐츠 헤더 -->
+          <div class="doc-header">
+            <button id="iconBtn" class="doc-icon-big" title="아이콘 변경">
+              📄
+            </button>
+            <div class="title-wrap">
+              <input
+                id="titleInput"
+                class="title-input"
+                placeholder="새 페이지"
+              />
+              <div id="docMeta" class="meta">
+                2025.11.19 <span id="lastEdited"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 도구모음 (toolbar) -->
+          <div
+            id="toolbar"
+            class="toolbar"
+            role="toolbar"
+            aria-label="에디터 도구모음"
+          >
+            <button class="tbtn" data-cmd="bold"><b>B</b></button>
+            <button class="tbtn" data-cmd="italic"><i>I</i></button>
+            <button class="tbtn" data-cmd="underline"><u>U</u></button>
+            <span class="sep"></span>
+            <button class="tbtn" data-format="P">P</button>
+            <button class="tbtn" data-format="H1">H1</button>
+            <button class="tbtn" data-format="H2">H2</button>
+            <button class="tbtn" data-format="H3">H3</button>
+            <span class="sep"></span>
+            <button id="bulletsBtn" class="tbtn">• List</button>
+            <button id="numbersBtn" class="tbtn">1. List</button>
+            <button id="todoBtn" class="tbtn">☐ To-do</button>
+            <button id="codeBtn" class="tbtn">{}</button>
+            <button id="quoteBtn" class="tbtn">"</button>
+          </div>
+
+          <!-- 에디터 -->
+          <div id="editor" class="editor" contenteditable="true"></div>
+        </div>
+      </main>
     </div>
+
+    <!-- /////////////////////////////////////////////// -->
   </body>
 </html>
