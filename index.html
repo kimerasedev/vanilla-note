@@ -13,6 +13,18 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
 
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -28,7 +40,7 @@
             title="사이드바 접기"
             aria-label="사이드바 접기"
           >
-            〈 〈
+            <i class="ph ph-caret-double-left"></i>
           </button>
 
           <!-- 프로필 -->
@@ -43,17 +55,23 @@
           <!-- 메뉴: 검색, 설정, 페이지 생성 -->
           <div class="nav-items">
             <div class="item" id="actionSearch">
-              <span>🔍 검색</span>
+              <i class="ph ph-magnifying-glass"></i>
+              <span>검색</span>
               <!-- 단축키 안내 -->
               <div class="right">
-                <span class="kbd">⌘</span><span class="kbd">K</span>
+                <span class="kbd">
+                  <i class="ph ph-command"></i>
+                </span>
+                <span class="kbd">K</span>
               </div>
             </div>
             <div class="item" id="actionSettings">
-              <span>⚙️ 설정</span>
+              <i class="ph ph-gear"></i>
+              <span>설정</span>
             </div>
             <div class="item" id="actionCreateRoot">
-              <span>➕ 새로운 페이지</span>
+              <i class="ph ph-plus"></i>
+              <span>새로운 페이지</span>
             </div>
             <div></div>
           </div>
@@ -63,14 +81,16 @@
           <div id="docListRoot" class="doc-list"></div>
           <div class="nav-items">
             <div class="itme" id="actionAddPage">
-              <span>➕ 페이지 추가</span>
+              <i class="ph ph-plus"></i>
+              <span>페이지 추가</span>
             </div>
           </div>
 
           <!-- 휴지통 -->
           <div class="nav-items">
             <div class="item" id="trashTrigger">
-              <span>🗑️ 휴지통</span>
+              <i class="ph ph-trash"></i>
+              <span>휴지통</span>
             </div>
           </div>
 
@@ -94,7 +114,7 @@
             title="사이드바 열기"
             aria-label="사이드바 열기"
           >
-            ☰
+            <i class="ph ph-list"></i>
           </button>
 
           <!-- Breadcrumbs (페이지 경로) -->
@@ -104,21 +124,25 @@
         <div class="row-end">
           <!-- 즐겨찾기 -->
           <button id="openFavoritesModal" class="btn small" title="즐겨찾기">
-            ★ 즐겨찾기
+            <i class="ph ph-star"></i> 즐겨찾기
           </button>
           <button id="starBtn" class="btn small" title="즐겨찾기 추가/해제">
-            ☆
+            <i class="ph ph-star"></i>
           </button>
 
           <!-- 하위 페이지 추가 -->
           <button id="newChildBtn" class="btn small" title="하위 페이지 추가">
-            ➕ 하위 페이지 추가
+            <i class="ph ph-plus"></i> 하위 페이지 추가
           </button>
 
           <!-- 검색 및 설정 -->
           <!-- ❓ id 이름 동일함??? -->
-          <button id="actionSearch" class="btn small" title="검색">🔍</button>
-          <button id="actionSettings" class="btn small" title="설정">⚙️</button>
+          <button id="actionSearch" class="btn small" title="검색">
+            <i class="ph ph-magnifying-glass"></i>
+          </button>
+          <button id="actionSettings" class="btn small" title="설정">
+            <i class="ph ph-gear"></i>
+          </button>
         </div>
       </header>
 
